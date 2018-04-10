@@ -1,0 +1,142 @@
+// Facets styling
+//
+// Simple block styling
+//
+//
+// Markup: footer-social-media.twig
+//
+// Style guide: components.footer-social-media
+
+.islandora-solr-facet-wrapper,
+%islandora-solr-facet-wrapper {
+  padding-bottom: .5rem;
+
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  ul,
+  div.islandora-solr-range-slider {
+    display: block;
+  }
+
+  input[type='checkbox']:checked ~ div.panel ul,
+  input[type='checkbox']:checked ~ div.islandora-solr-range-slider {
+    display: none;
+  }
+
+  input[type='checkbox']:checked ~ h3 label::before,
+  .icon-angle-circled-down.active::before {
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    color: white;
+  }
+
+  .soft-limit {
+    display: none;
+  }
+
+  .soft-limit-more {
+    text-align: right;
+    width: 100%;
+    display: block;
+  }
+
+  div[class*='panel']:last-of-type {
+    .soft-limit-more {
+      display: none;
+    }
+  }
+
+  label.accordion {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: 0;
+    outline: none;
+    transition: .4s;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+
+  label.accordion::before {
+    color: white;
+    content:"\E802";
+    float: right;
+    font-family: 'fontello';
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    -moz-transition: all .25s linear;
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+  }
+
+  .icon-angle-circled-down.active::after {
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  /* Style the accordion panel. Note: hidden by default */
+  div.panel {
+    padding: 0 18px;
+    background-color: transparent;
+/*     display: none; */
+  }
+
+  h3 {
+    display: inline-block;
+    margin: 0;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 200;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+
+    &:before {
+      color: white;
+    }
+
+    &:hover {
+      background-color: black;
+      color: white;
+      transition: background-color 1000ms linear;
+    }
+  }
+
+  ul.islandora-solr-facet {
+    margin: 0;
+    padding: 0;
+    
+    .plusminus {
+      a {
+        color: black;
+      }
+    }
+
+    li {
+      padding: 2px 0;
+      list-style-type: none;
+      list-style-image: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+  }
+}
+
+#block-islandora-solr-basic-facets {
+  padding-top: 3px;
+}

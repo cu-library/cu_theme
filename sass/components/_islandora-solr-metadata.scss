@@ -1,0 +1,28 @@
+fieldset.islandora-metadata {
+  background-color: white;
+  border: none;
+
+  .fieldset-legend {
+    padding-top: 25px;
+    display: block;
+  }
+  
+  h3 {
+    margin: 0;
+  }
+
+  dd,
+  dt {
+    border-top: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.islandora-solr-content {
+  dd {
+    margin: 0;
+  }
+}

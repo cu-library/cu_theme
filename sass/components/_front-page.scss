@@ -1,0 +1,71 @@
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 940px) {
+  /**
+  * Front page slideshow.
+  **/
+  #block-views-frontpage-hero-slideshow-block {
+    .image-background {
+      .data-wrapper {
+        .inner-data-wrapper {
+          padding-top: 0 !important;
+
+          h2,
+          span {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  /**
+  * Front page Featured Collections
+  **/
+  #block-views-featured-collections-block {
+    .data-wrapper {
+      padding: 0 !important;
+
+      .text-data,
+      .photo {
+        display: block !important;
+        width: 100% !important;
+      }
+  
+      .text-data {
+        padding-top: 0 !important;
+        height: auto !important;
+      }
+    }
+  
+    .views-row-odd {
+      .photo {
+        text-align: center !important;
+      }
+  
+      .text-data {
+        float: none !important;
+      }
+    }
+  
+    .views-row-even {
+      .photo {
+        text-align: center !important;
+        img {
+          vertical-align: bottom;
+        }
+      }
+  
+      .text-data {
+        float: none;
+        text-align: center !important;
+      }
+    }
+  }
+
+  /**
+  * Front page Featured Collections
+  **/
+  .islandora-solr-grid {
+    text-align: center;
+  }
+}
