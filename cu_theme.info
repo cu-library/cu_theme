@@ -60,6 +60,7 @@
 ;----------// Scripts
 scripts[] = scripts/match-height.js
 scripts[] = scripts/match-height-controller.js 
+scripts[] = scripts/simple-search.js
 
   ; Internet Explorer Scripts
   ;

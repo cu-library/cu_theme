@@ -58,3 +58,19 @@ function cu_theme_preprocess_islandora_solr_facet(&$variables) {
     $bucket['link_minus'] = str_replace('class="minus">-', 'class="plus"><i title="minus-circled" class="icon icon-minus-circled minus-circled" aria-hidden="true"></i>', $bucket['link_minus']);
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function cu_theme_form_islandora_solr_simple_search_form_alter(&$form, &$form_state) {
+  $link = array(
+    '#markup' => l(
+      t("Advanced Search"),
+      "#",
+      array(
+        'attributes' => array('class' => array('adv_search')),
+      )
+    ),
+  );
+  $form['simple']['advanced_link'] = $link;
+}

@@ -698,6 +698,61 @@ fieldset.islandora-metadata dt p {
   margin-right: auto;
 }
 
+/* line 3, ../sass/components/_simple-search-block-group.scss */
+#islandora-solr-simple-search-form #edit-simple {
+  position: relative;
+}
+/* line 7, ../sass/components/_simple-search-block-group.scss */
+#islandora-solr-simple-search-form .form-item-islandora-simple-search-query {
+  display: block;
+  margin-bottom: 0;
+}
+/* line 11, ../sass/components/_simple-search-block-group.scss */
+#islandora-solr-simple-search-form .form-item-islandora-simple-search-query input {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* line 17, ../sass/components/_simple-search-block-group.scss */
+#islandora-solr-simple-search-form .form-submit {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background: url('images/magnifier.png?1523448732');
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 2px 2px;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  text-indent: -9999px;
+}
+/* line 31, ../sass/components/_simple-search-block-group.scss */
+#islandora-solr-simple-search-form .adv_search {
+  float: right;
+  font-size: 90%;
+}
+
+/* line 38, ../sass/components/_simple-search-block-group.scss */
+.region-blockgroup-first-sidebar-search-blocks #block-islandora-solr-advanced {
+  display: none;
+}
+/* line 42, ../sass/components/_simple-search-block-group.scss */
+.region-blockgroup-first-sidebar-search-blocks .solr-search-title {
+  background-color: black;
+}
+/* line 45, ../sass/components/_simple-search-block-group.scss */
+.region-blockgroup-first-sidebar-search-blocks .solr-search-title h3 {
+  display: inline-block;
+  margin: 0;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  width: 100%;
+  font-weight: 200;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+}
+
 /*
  * responsive.custom.css is for custom media queries that are not set via the
  * theme settings, such as cascading media queries.
