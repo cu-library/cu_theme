@@ -1,12 +1,10 @@
-
-// _base.scss imports _custom.scss and other partials.
-@import "base";
-
 /*
  * @file
  * Print Styles
  * This probably needs work, but it's a good starting point.
  */
+
+@media print {
 
 /*
  * Body
@@ -334,4 +332,5 @@ form {
     margin: 0;
     padding: 0;
   }
+}
 }
