@@ -1,0 +1,52 @@
+//
+// 'base' scss file, imports all others.
+//
+// To make it easier to use all variables and mixins in any SCSS file in this
+// theme, each .scss file has a @import 'base' declaration. And this base.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+
+//
+// Partials to be shared with all .scss files.
+//
+
+@import 'compass/support';                     // Add Compass and IE vendor prefix support variables.
+@import 'compass/utilities/general/clearfix';  // Better than Drupal's clearfix.
+@import 'compass/utilities/sprites';           // See http://compass-style.org/help/tutorials/spriting/
+@import 'compass/css3';                        // Use one CSS3 mixin instead of multiple vendor prefixes.
+
+
+//
+// Import custom partial - mixins and variables defined for your theme
+//
+
+@import 'components/front-page';
+@import 'custom';
+@import 'form-items';
+@import 'components/leaderboard';
+@import 'components/branding';
+@import 'components/banner';
+@import 'components/featured-collections';
+@import 'components/footer-trip';
+@import 'components/islandora-toolbar';
+@import 'components/facets';
+@import 'components/breadcrumb';
+@import 'components/advanced-search'; 
+@import 'components/islandora-solr-metadata';
+@import 'components/islandora-objects';
+@import 'components/simple-search-block-group';
+
+//
+// Convert AdaptiveThemes base CSS files into sass partials, so raw CSS is not included in the theme.
+//
+
+@import 'global.base';
+@import 'global.styles';
+@import 'lt-ie9';
+@import 'print';
+@import 'responsive.custom';
+@import 'responsive.desktop';
+@import 'responsive.smalltouch.landscape';
+@import 'responsive.smalltouch.portrait';
+@import 'responsive.tablet.landscape';
+@import 'responsive.tablet.portrait';

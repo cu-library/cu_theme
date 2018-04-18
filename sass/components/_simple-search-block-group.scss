@@ -1,0 +1,57 @@
+
+#islandora-solr-simple-search-form {
+  #edit-simple {
+    position: relative;
+  }
+
+  .form-item-islandora-simple-search-query {
+    display: block;
+    margin-bottom: 0;
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  .form-submit {
+    position: absolute; 
+    right: 5px;
+    top: 5px;
+    background: image-url("magnifier.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 2px 2px;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    text-indent: -9999px;
+  }
+
+  .adv_search {
+    float: right;
+    font-size: 90%;
+  }
+}
+
+.region-blockgroup-first-sidebar-search-blocks {
+  #block-islandora-solr-advanced {
+    display: none;
+  }
+
+  .solr-search-title {
+    background-color: black;
+
+    h3 {
+      display: inline-block;
+      margin: 0;
+      padding: 10px 5px;
+      box-sizing: border-box;
+      width: 100%;
+      font-weight: 200;
+      font-size: 16px;
+      background-color: black;
+      color: white;
+    }
+  }
+}

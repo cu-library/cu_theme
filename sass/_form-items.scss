@@ -1,0 +1,35 @@
+.form-type-textfield input {
+  background: white;
+  border: none;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  padding: 2px 10px;
+  height: 34px;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+}
+
+.form-type-select {
+  height: 34px;
+
+  select {
+    background: white url('../images/sort-arrows-couple-pointing-up-and-down.png') no-repeat right center;
+    background-position: right 5px center;
+    background-size: 13px 13px;
+    border: none;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    padding: 5px 20px 5px 10px;
+    height: 34px;
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+  }
+}
+
+.form-submit {
+  border: none;
+  padding: 10px;
+  background-color: #3D6477;
+  color: white;
+  
+}
