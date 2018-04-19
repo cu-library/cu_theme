@@ -63,6 +63,9 @@ function cu_theme_preprocess_islandora_solr_facet(&$variables) {
  * Implements hook_form_FORM_ID_alter().
  */
 function cu_theme_form_islandora_solr_simple_search_form_alter(&$form, &$form_state) {
+  $form['simple']['islandora_simple_search_query']['#title_display'] = 'invisible';
+  $form['simple']['islandora_simple_search_query']['#attributes']['placeholder'] = t('Search');
+
   $link = array(
     '#markup' => l(
       t("Advanced Search"),
