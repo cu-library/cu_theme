@@ -89,7 +89,7 @@
   <?php print render($title_prefix); ?>
 
   <?php if ($title): ?>
-    <div class="solr-search-title"><h3<?php print $title_attributes; ?>><?php print $title; ?></h3></div>
+    <div class="solr-search-title"><h2<?php print $title_attributes; ?>><?php print $title; ?></h2></div>
   <?php endif; ?>
 
   <?php print $content_processed; ?>

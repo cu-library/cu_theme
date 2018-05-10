@@ -61,6 +61,7 @@
 scripts[] = scripts/match-height.js
 scripts[] = scripts/match-height-controller.js 
 scripts[] = scripts/simple-search.js
+;scripts[] = scripts/ia-bookreader-wcag.js
 
   ; Internet Explorer Scripts
   ;

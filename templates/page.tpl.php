@@ -45,7 +45,7 @@
  * - $main_menu (array): An array containing the Main menu links for the
  *   site, if they have been configured.
  * - $secondary_menu (array): An array containing the Secondary menu links for
- *   the site, if they have been configured.
+ *   the site, if they have been configured.d
  * - $breadcrumb: The breadcrumb trail for the current page.
  *
  * Page content (in order of occurrence in the default page.tpl.php):
@@ -203,14 +203,22 @@
           </<?php print $tag; ?>><!-- /end #main-content -->
 
           <!-- !Content Aside Region-->
-          <?php print render($page['content_aside']); ?>
+          <div aria-label="complementary">
+            <?php print render($page['content_aside']); ?>
+          </div>
+
 
         </div><!-- /end .content-inner -->
       </main><!-- /end #content-column -->
 
       <!-- !Sidebar Regions -->
-      <?php $sidebar_first = render($page['sidebar_first']); print $sidebar_first; ?>
-      <?php $sidebar_second = render($page['sidebar_second']); print $sidebar_second; ?>
+      <div role="complementary">
+        <?php $sidebar_first = render($page['sidebar_first']); print $sidebar_first; ?>
+      </div>
+
+      <div role="complementary">
+        <?php $sidebar_second = render($page['sidebar_second']); print $sidebar_second; ?>
+      </div>
 
     </div><!-- /end #columns -->
 

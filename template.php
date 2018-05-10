@@ -54,8 +54,8 @@ function cu_theme_islandora_solr_facet_wrapper($variables) {
  */
 function cu_theme_preprocess_islandora_solr_facet(&$variables) {
   foreach ($variables['buckets'] as $key => &$bucket) {
-    $bucket['link_plus'] = str_replace('class="plus">+', 'class="plus"><i title="plus-circled" class="icon icon-plus-circled plus-circled" aria-hidden="true"></i>', $bucket['link_plus']);
-    $bucket['link_minus'] = str_replace('class="minus">-', 'class="plus"><i title="minus-circled" class="icon icon-minus-circled minus-circled" aria-hidden="true"></i>', $bucket['link_minus']);
+    $bucket['link_plus'] = str_replace('class="plus">+', 'class="plus" aria-label="Add"><i title="plus-circled" class="icon icon-plus-circled plus-circled" aria-hidden="true"></i>', $bucket['link_plus']);
+    $bucket['link_minus'] = str_replace('class="minus">-', 'class="plus" aria-label="Remove"><i title="minus-circled" class="icon icon-minus-circled minus-circled" aria-hidden="true"></i>', $bucket['link_minus']);
   }
 }
 
@@ -76,4 +76,32 @@ function cu_theme_form_islandora_solr_simple_search_form_alter(&$form, &$form_st
     ),
   );
   $form['simple']['advanced_link'] = $link;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function cu_theme_form_islandora_bookmark_fedora_repository_object_form_alter(&$form, &$form_state) {
+  if ($form['islandora_bookmark']['title']) {
+    unset($form['islandora_bookmark']['title']);
+  }
+
+  if ($form['islandora_bookmark']['add_bookmarks']) {
+    $form['islandora_bookmark']['add_bookmarks']['#title']
+      = t('Add Bookmark');
+    $form['islandora_bookmark']['add_bookmarks']['#title_display']
+      = 'invisible';
+  }
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function cu_theme_js_alter(&$javascript) {
+  $path = drupal_get_path('theme',$GLOBALS['theme']);
+
+  if (isset($javascript['sites/all/modules/islandora_solr_search/js/islandora_solr_facets.js'])){
+    $javascript['sites/all/modules/islandora_solr_search/js/islandora_solr_facets.js']['data'] =
+    "$path/scripts/islandora_solr_facets.js";
+  }
 }
