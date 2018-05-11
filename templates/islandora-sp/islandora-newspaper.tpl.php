@@ -16,7 +16,7 @@
 <div class="islandora-newspaper-object islandora">
   <div class="islandora-newspaper-content-wrapper clearfix">
     <?php if ($islandora_content): ?>
-      <div class="islandora-newspaper-content object-content">
+      <div class="islandora-newspaper-content">
         <?php print $islandora_content; ?>
       </div>
     <?php endif; ?>
