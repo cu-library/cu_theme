@@ -82,11 +82,15 @@ function cu_theme_form_islandora_solr_simple_search_form_alter(&$form, &$form_st
  * Implements hook_form_FORM_ID_alter().
  */
 function cu_theme_form_islandora_bookmark_fedora_repository_object_form_alter(&$form, &$form_state) {
-  if (isset($form['islandora_bookmark']['title'])) {
+  if (isset($form['islandora_bookmark']['title'])
+    && $form['islandora_bookmark']['title'] !== FALSE) {
+
     unset($form['islandora_bookmark']['title']);
   }
 
-  if (isset($form['islandora_bookmark']['add_bookmarks'])) {
+  if (isset($form['islandora_bookmark']['add_bookmarks'])
+    && $form['islandora_bookmark']['add_bookmarks'] !== FALSE) {
+
     $form['islandora_bookmark']['add_bookmarks']['#title']
       = t('Add Bookmark');
     $form['islandora_bookmark']['add_bookmarks']['#title_display']
