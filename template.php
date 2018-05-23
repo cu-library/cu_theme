@@ -21,18 +21,23 @@
  * 2. Uncomment the required function to use.
  */
 
+/**
+ * Implements HOOK_islandora_solr_display_manager_alter().
+ */
 function cu_theme_islandora_solr_display_manager_alter(&$variables) {
   // Move the sort block to the end of the array.
   $sort = $variables['islandora_toolbar']['sort'];
   unset($variables['islandora_toolbar']['sort']);
   $variables['islandora_toolbar']['sort'] = $sort;
+}
 
-  // Instead of plain text, add a fontello icon to represent enhanced grid.
-  $variables['islandora_toolbar']['display_lists']['#markup']
-    = str_replace(
-      "Enhanced Grid",
-      "<i class='icon-th-large'></i>",
-      $variables['islandora_toolbar']['display_lists']['#markup']
+/**
+ * Implements HOOK_islandora_solr_display_manager_fontello_info_alter().
+ */
+function cu_theme_islandora_solr_display_manager_fontello_info_alter(&$variables) {
+  $variables['enhanced-grid'] = array(
+    'title' => t('Enhanced Grid'),
+    'icon class' => 'icon-th-large',
   );
 }
 
