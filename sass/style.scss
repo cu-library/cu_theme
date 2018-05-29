@@ -35,6 +35,8 @@
 @import 'components/islandora-solr-metadata';
 @import 'components/islandora-objects';
 @import 'components/simple-search-block-group';
+@import 'components/front-page-image/front-page-image';
+@import 'components/front-page-small-image/front-page-small-image';
 
 //
 // Convert AdaptiveThemes base CSS files into sass partials, so raw CSS is not included in the theme.

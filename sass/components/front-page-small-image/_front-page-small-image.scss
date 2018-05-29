@@ -1,0 +1,12 @@
+.front-page-small-image {
+  width: 425px;
+  height: 283px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 425px;
+    height: 283px;
+    object-position: 50% 50%;
+  }
+}
