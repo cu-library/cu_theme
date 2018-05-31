@@ -19,6 +19,7 @@
  */
 ?>
 
+<div id="islandora-solr-result-count"><?php print $islandora_solr_result_count; ?></div>
 <div class="islandora-solr-content">
   <?php print $solr_pager; ?>
   <?php print $results; ?>

@@ -1,0 +1,12 @@
+.front-page-large-image {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 420px;
+    object-position: 50% 50%;
+  }
+}
